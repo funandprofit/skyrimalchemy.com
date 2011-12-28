@@ -1,0 +1,24 @@
+# OSX
+.DS_Store
+._*
+
+# Rails
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+/.bundle
+/vendor/bundle
+/log/*
+/tmp/*
+/db/*.sqlite3
+/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+
+# TextMate
+*.tmproj
+*.tmproject
+tmtags

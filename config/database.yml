@@ -1,0 +1,16 @@
+development: &development
+  adapter: postgresql
+  host: localhost
+  username: postgres
+  password: not_blank
+  encoding: UTF8
+  min_messages: warning
+  database: app_dev
+
+test: &test
+  <<: *development
+  database: app_test
+
+production:
+  <<: *development
+  database: app_production
