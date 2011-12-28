@@ -1,3 +1,5 @@
 class EffectsController < ApplicationController
-  actions :only => [:index, :show]
+  defaults :finder => :find_by_slug
+
+  actions :index, :show
 end

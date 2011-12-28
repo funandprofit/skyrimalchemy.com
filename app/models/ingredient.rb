@@ -1,6 +1,10 @@
 class Ingredient < ActiveRecord::Base
   has_and_belongs_to_many :effects
 
+  before_create :set_slug
+
+  default_scope order('name ASC')
+
   def self.import
     transaction do
       html = Nokogiri::HTML(HTTParty.get 'http://www.uesp.net/wiki/Skyrim:Ingredients')
@@ -30,4 +34,12 @@ class Ingredient < ActiveRecord::Base
     end
   end
 
+  def to_param
+    slug
+  end
+
+  private
+    def set_slug
+      self.slug = name.gsub("'", '').parameterize
+    end
 end
