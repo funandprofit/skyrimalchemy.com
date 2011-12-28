@@ -5,12 +5,12 @@ development: &development
   password: not_blank
   encoding: UTF8
   min_messages: warning
-  database: app_dev
+  database: skyrim_dev
 
 test: &test
   <<: *development
-  database: app_test
+  database: skyrim_test
 
 production:
   <<: *development
-  database: app_production
+  database: skyrim_production
