@@ -1,0 +1,2 @@
+class EffectsController < ApplicationController
+end
