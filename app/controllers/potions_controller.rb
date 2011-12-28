@@ -1,0 +1,2 @@
+class PotionsController < ApplicationController
+end
