@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-RailsSkeleton::Application.load_tasks
+SkyrimAlchemy::Application.load_tasks

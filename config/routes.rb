@@ -1,4 +1,4 @@
-RailsSkeleton::Application.routes.draw do
+SkyrimAlchemy::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
