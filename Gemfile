@@ -34,8 +34,8 @@ end
 
 # Remote/parsing
 # gem 'cabinet'
-# gem 'httparty'
-# gem 'nokogiri'
+gem 'httparty'
+gem 'nokogiri'
 
 # Queuing
 # gem 'resque'
