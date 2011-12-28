@@ -1,2 +1,0 @@
-class PotionsController < ApplicationController
-end
