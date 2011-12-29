@@ -2,15 +2,13 @@ module ApplicationHelper
   def page_title
     case
       when @ingredients.present?
-        'Skyrim Alchemy Ingredients'
+        'Skyrim Alchemy Potion Ingredients'
       when @ingredient.present?
-        "#{@ingredient.name} - Skyrim Alchemy Ingredients"
+        "#{@ingredient.name} - Skyrim Alchemy Potion Ingredients"
       when @effects.present?
-        'Skyrim Alchemy Effects'
+        'Skyrim Alchemy Potion Effects'
       when @effect.present?
-        "#{@effect.name} - Skyrim Alchemy Effects"
-      else
-        'Skyrim Alchemy Ingredients'
+        "#{@effect.name} - Skyrim Alchemy Potion Effects"
     end
   end
 end
