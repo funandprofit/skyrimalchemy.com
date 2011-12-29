@@ -42,7 +42,7 @@ gem 'nokogiri'
 
 # Testing
 group :test, :development do
-  gem 'rspec-rails', '~> 2.7'
+  gem 'rspec-rails', '~> 2.8.0.rc2'
   # gem 'resque_spec'
   # gem 'cucumber-rails'
   gem 'fuubar'
