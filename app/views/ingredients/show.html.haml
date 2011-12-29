@@ -1,4 +1,5 @@
 %h1 #{@ingredient.name} Skyrim Ingredient
+= link_to 'View on UESP', @ingredient.uesp_link
 %h2 Ideal ingredient matchers:
 - if @ingredient.matching_ingredients.any?
   %ul
