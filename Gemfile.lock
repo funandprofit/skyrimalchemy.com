@@ -183,7 +183,7 @@ DEPENDENCIES
   nokogiri
   pg
   rails (= 3.2.0.rc1)
-  rspec-rails (~> 2.6)
+  rspec-rails (~> 2.7)
   ruby-debug-base19 (~> 0.11.26)
   ruby-debug19
   sass-rails (~> 3.2.0)
