@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Ingredient do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'creates a slug for the ingredient' do
+    effect = Effect.make(:name => 'Some effect')
+    effect.slug.should == 'some-effect'
+  end
 end
