@@ -6,4 +6,8 @@
     = javascript_include_tag 'application'
     =# csrf_meta_tags
   %body
+    #menu
+      %ul
+        %li= link_to 'Ingredients', ingredients_path
+        %li= link_to 'Effects', effects_path
     = yield
