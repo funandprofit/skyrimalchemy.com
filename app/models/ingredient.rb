@@ -38,6 +38,15 @@ class Ingredient < ActiveRecord::Base
     slug
   end
 
+  def matching_ingredients
+    hsh = effects.map(&:ingredients).flatten.inject(Hash.new(0)) do |a, e|
+      a[e] += 1 unless e == self
+      a
+    end
+
+    hsh.reject{ |k, v| v < 2 }.keys
+  end
+
   private
     def set_slug
       self.slug = name.gsub("'", '').parameterize

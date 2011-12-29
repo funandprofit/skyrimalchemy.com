@@ -1,4 +1,14 @@
 %h1 #{@ingredient.name} Skyrim Ingredient
+%h2 Ideal ingredient matchers:
+- if @ingredient.matching_ingredients.any?
+  %ul
+    - @ingredient.matching_ingredients.each do |ingredient|
+      %li
+        = link_to ingredient.name, ingredient_path(ingredient)
+        (#{(ingredient.effects & @ingredient.effects).map(&:name).join(', ')})
+- else
+  %p
+    %i None
 %h2 Effects:
 - @ingredient.effects.each do |effect|
   %h3= link_to effect.name, effect_path(effect)
