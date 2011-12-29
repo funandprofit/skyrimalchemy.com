@@ -1,0 +1,4 @@
+%ul
+  - @effects.each do |effect|
+    %li
+      = link_to effect.name, effect_path(effect)

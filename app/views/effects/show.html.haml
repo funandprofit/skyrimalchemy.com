@@ -1,0 +1,5 @@
+%h1 #{@effect.name} Skyrim Potion Effect
+%h2 Ingredients:
+%ul
+  - @effect.ingredients.each do |ingredient|
+    %li= link_to ingredient.name, ingredient_path(ingredient)
