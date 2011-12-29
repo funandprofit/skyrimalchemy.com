@@ -1,4 +1,6 @@
 class Ingredient < ActiveRecord::Base
+  has_many :ingredient_matchers, :through => :effects, :source => :ingredients
+
   has_and_belongs_to_many :effects
 
   before_create :set_slug
@@ -39,7 +41,7 @@ class Ingredient < ActiveRecord::Base
   end
 
   def matching_ingredients
-    hsh = effects.map(&:ingredients).flatten.inject(Hash.new(0)) do |a, e|
+    hsh = ingredient_matchers.inject(Hash.new(0)) do |a, e|
       a[e] += 1 unless e == self
       a
     end
