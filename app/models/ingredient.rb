@@ -44,7 +44,7 @@ class Ingredient < ActiveRecord::Base
       a
     end
 
-    hsh.reject{ |k, v| v < 2 }.keys
+    hsh.reject{ |k, v| v < 2 }.sort{ |x, y| y.last <=> x.last }.map(&:first)
   end
 
   private
