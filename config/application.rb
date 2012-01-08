@@ -55,5 +55,7 @@ module SkyrimAlchemy
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.gauges.site_id = '4f095265613f5d3b5a000001'
   end
 end

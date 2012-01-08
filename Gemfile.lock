@@ -49,6 +49,7 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.1.8)
       ruby-progressbar (~> 0.0.10)
+    gauges-rails (0.0.1)
     haml (3.1.4)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -157,6 +158,7 @@ DEPENDENCIES
   database_cleaner
   forgery
   fuubar
+  gauges-rails
   haml
   haml-rails
   httparty
