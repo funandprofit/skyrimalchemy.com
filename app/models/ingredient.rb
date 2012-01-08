@@ -15,7 +15,7 @@ class Ingredient < ActiveRecord::Base
 
         unless columns.empty?
           a << {
-            :name       => columns[0].try(:text),
+            :name       => columns[0].try(:xpath, 'a').try(:text),
             :game_id    => columns[1].try(:text),
             :uesp_link  => 'http://www.uesp.net' + columns[0].try(:xpath, 'a').try(:attribute, 'href').try(:value),
             :base_value => columns[7].try(:text),
