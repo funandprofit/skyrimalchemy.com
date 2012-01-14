@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '3.2.0.rc1'
+gem 'rails', '3.2.0.rc2'
 
 # Models
 gem 'pg'
@@ -19,7 +19,7 @@ gem 'jquery-rails'
 # gem 'will_paginate'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.0'
+  gem 'sass-rails'
   gem 'coffee-rails', '~> 3.2.0'
   gem 'uglifier',     '>= 1.0.3'
 end
