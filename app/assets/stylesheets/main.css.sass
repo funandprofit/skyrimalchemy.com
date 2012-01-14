@@ -1,0 +1,22 @@
+$site-width: 960px
+@mixin horizontal-center
+  margin-left: auto
+  margin-right: auto
+
+body
+  background: black url('bg-header.jpg') top center no-repeat
+  font: 14px/1.35 "Helvetica Neue", sans-serif
+  padding-top: 30px
+
+body > header
+  @include horizontal-center
+  background: url('skyrim-alchemy-logo.png') no-repeat
+  height: 75px
+  width: $site-width
+
+body > section
+  @include horizontal-center
+  background: white
+  border-radius: 4px
+  margin-top: 30px
+  width: $site-width
