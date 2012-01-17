@@ -3,6 +3,15 @@ $site-width: 960px
   margin-left: auto
   margin-right: auto
 
+.clearfix
+  *display:     block
+  &:after
+    content:    ' '
+    display:    block
+    height:     0
+    clear:      both
+    visibility: hidden
+
 body
   background: black url('bg-header.jpg') top center no-repeat
   font: 14px/1.35 "Helvetica Neue", sans-serif
