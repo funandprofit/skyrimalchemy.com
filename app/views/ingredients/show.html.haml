@@ -1,19 +1,22 @@
-%h1 #{@ingredient.name} Skyrim Ingredient
-= link_to 'View on UESP', @ingredient.uesp_link
-%h2 Ideal ingredient matchers:
-- if @ingredient.matching_ingredients.any?
-  %ul
-    - @ingredient.matching_ingredients.each do |ingredient|
-      %li
-        = link_to ingredient.name, ingredient_path(ingredient)
-        (#{(ingredient.effects & @ingredient.effects).map(&:name).join(', ')})
-- else
-  %p
-    %i None
-%h2 Effects:
-- @ingredient.effects.each do |effect|
-  %h3= link_to effect.name, effect_path(effect)
-  %h4 Matching ingredients:
-  %ul
-    - (effect.ingredients - [@ingredient]).each do |ingredient|
-      %li= link_to ingredient.name, ingredient_path(ingredient)
+#top
+#main
+  %h1
+    #{@ingredient.name} #{uesp_link(@ingredient)}
+  %h2 Ideal ingredient matchers:
+  - if @ingredient.matching_ingredients.any?
+    %ul.ingredient-list.no-columns
+      - @ingredient.matching_ingredients.each do |ingredient|
+        %li
+          = link_to ingredient.name, ingredient_path(ingredient), :title => tooltip(ingredient), class: 'tooltip'
+          (#{effect_list(ingredient)})
+  - else
+    %p
+      %i None
+  %h2 Effects:
+  - @ingredient.effects.each do |effect|
+    %h3<
+      = link_to effect.name, effect_path(effect), class: 'effect'
+      = ':'
+    %ul.ingredient-list
+      - (effect.ingredients - [@ingredient]).each do |ingredient|
+        %li= link_to ingredient.name, ingredient_path(ingredient), :title => tooltip(ingredient), class: 'tooltip'
