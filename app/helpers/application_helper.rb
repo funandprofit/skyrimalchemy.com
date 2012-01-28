@@ -22,23 +22,21 @@ module ApplicationHelper
   end
 
   def headline(obj)
-    content_tag(:h3, obj.name + uesp_link(obj))
+    content_tag(:h3, obj.name + uesp_link(obj).gsub('"', "'"))
   end
 
   def uesp_link(obj)
     link_to '', obj.uesp_link, class: 'uesp', title: "See #{obj.name} on UESP"
   end
 
-  def tooltip(ingredient)
-    tooltip = [headline(ingredient), *ingredient.effects.map(&:name).join('<br>')]
-
-    tooltip.join.html_safe
+  def tooltip(obj)
+    [headline(obj), *obj.tooltip_records.map{ |r| link_to(r.name, r).gsub('"', "'") }.join('<br>')].join.html_safe
   end
 
-  # (#{(ingredient.effects & @ingredient.effects).map(&:name).join(', ')})
   def effect_list(ingredient)
     (ingredient.effects & @ingredient.effects).inject([]) do |a, e|
       a << link_to(e.name, ingredient_path(e), class: 'effect tooltip')
     end.join(', ').html_safe
   end
+
 end
