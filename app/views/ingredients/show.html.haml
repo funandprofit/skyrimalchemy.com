@@ -7,7 +7,7 @@
     %ul.ingredient-list.no-columns
       - @ingredient.matching_ingredients.each do |ingredient|
         %li
-          = link_to ingredient.name, ingredient_path(ingredient), :title => tooltip(ingredient), class: 'tooltip'
+          = link_to ingredient.name, ingredient_path(ingredient), title: tooltip(ingredient), class: 'tooltip'
           (#{effect_list(ingredient)})
   - else
     %p
@@ -19,4 +19,4 @@
       = ':'
     %ul.ingredient-list
       - (effect.ingredients - [@ingredient]).each do |ingredient|
-        %li= link_to ingredient.name, ingredient_path(ingredient), :title => tooltip(ingredient), class: 'tooltip'
+        %li= link_to ingredient.name, ingredient_path(ingredient), title: tooltip(ingredient), class: 'tooltip'
