@@ -3,6 +3,15 @@ $background-color: #edeff2
 $text-color:       #363b40
 $link-color:       #363b40
 
+@font-face
+  font-family: 'Am Sans'
+  src:         url('amsansr-webfont.eot')
+  src:         url('amsansr-webfont.eot?#iefix') format('embedded-opentype'), url('amsansr-webfont.woff') format('woff'), url('amsansr-webfont.ttf') format('truetype'), url('amsansr-webfont.svg#AmSansRegular') format('svg')
+  font-weight: normal
+  font-style:  normal
+
+=horizontal-center
+  margin-left:  auto
   margin-right: auto
 
 .clearfix
@@ -15,8 +24,7 @@ $link-color:       #363b40
     visibility: hidden
 
 body
-  background: black url('bg-header.jpg') top center no-repeat
-  font: 14px/1.35 "Helvetica Neue", sans-serif
+  font: 18px/1.4 "Am Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif
   padding-top: 30px
 
 body > header
