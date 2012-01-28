@@ -8,9 +8,8 @@
   %body
     %header
     %section
-      %nav#menu
-        %ul
-          %li= link_to 'Ingredients', ingredients_path
-          %li= link_to 'Effects', effects_path
-      = yield
+      #main-content
+        = render :partial => 'layouts/main_menu'
+        #main-content-wrapper
+          = yield
     = render :partial => 'layouts/footer'

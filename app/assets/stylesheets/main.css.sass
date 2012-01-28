@@ -52,10 +52,12 @@ body > footer
 
 #main-content-wrapper a
   &:link, &:visited
-    border-bottom: 1px dotted #888
+    border-bottom: 1px dotted #ccc
     color: $link-color
-  &:active
-  &:hover
+    &.effect
+      color: #1f84cc
+      font-weight: bold
+  &:hover, &:active
     background-color: #dadee0
     border-bottom: 1px solid black
     color: black
@@ -95,13 +97,14 @@ body > footer
     background-repeat: no-repeat
     color: #525759
     display: block
-    letter-spacing: 1px
+    font-size: 115%
     line-height: 50px
     opacity: .5
     text-indent: 58px
     text-shadow: 1px 1px 1px #e5e5e5
     -moz-transition: all 0.2s ease-in-out
-    width: 300px
+    -webkit-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
   a:hover, a:active
     opacity: .8
   &.ingredients
@@ -137,5 +140,61 @@ body > footer
   -moz-column-count: 3
   -webkit-column-count: 3
   column-count: 3
+  margin-bottom: 20px
+  &:last-of-type
+    margin-bottom: 0
   li
     margin-bottom: 7px
+
+.no-columns
+  -moz-column-count: 1
+  -webkit-column-count: 1
+  column-count: 1
+
+.uesp
+  -moz-transition: opacity 0.2s ease-in-out
+  -webkit-transition: opacity 0.2s ease-in-out
+  transition: opacity 0.2s ease-in-out
+  &:link, &:visited
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAANCAYAAADFVhxbAAACs0lEQVR42r2T70tTYRTHJU2FFIuwWj/eaYIvTJemzZzT5ZymOKclK52mZglOB0pqjazAUIgo+lMyeqG+CsQfd3P+WCmEkiTanI0SU7yMb+exeHYvV9sb8cUHzvc5z3POl3PuDQOwJ2NZ6cUTWs2MkJeDw4T1ZL33NTahu+bzdbch8LIHgRddCDxrR+AJaYeNaDkgbH9rPu9AoN+BwJte+LrtYL33Ncbci32PIPbYIXY1Q2xvwE5bLXZaaw4Wex3Eh00QyaRIAxDJHPXe29RoetqpSUM+th2t2CJDfr9/l9+NFdisN3HNYzk8R4Q4l7NF5rb7HUpjY5npcWOazFc0yo3F2lvYIFO/mi384fdSPX5aCoO6JF8aK+A5uaYaBlnNNXNQb9JayRj/0KPHNVcekyH/woO7WH/aAT+t70dLNdYbzPzRUpEOaxU6rr8W5cpiyknZM8diBq9ZrIOvupjr1aY7EmPZma9nK8uw1NkG/9s++Ho74aW9r9K0VurK+KM5oxbLppygNvBYAd1jhDiXs2ghD40WZky2Rj39qnPz96xYdtixbLNiofAy5tPOwev17vLxeDg+XYgI6rgj0lgB3WWwWHpXXuNEBEbiozF6Pg7OJBWWrCUYVafIv7GRlOTwfyvdENRJNBE1PFcTeJGh+Ci4E2O5HjwZKYvdCTFSeC6ole+GyNRMqgoeTSLmijLw5bYRw8cipcZk01MNx0bBY9ZhukANd3YSKyLj/dkYgjdTIFxSMUK++0CTmiRT0/pUeMpzMV9vxuDRMG5GAUvO1pkwdVMP140sCNfTMHDxDN4lnOaMa5MZ0rMQeeX5AK3PacyAm0zN1JTgs80a0tg3Z3kBpu9XwW0thavKAKEiDwIVEEzag4FqOSvz4bIYMUWTmiVTLnMhWO//GTMSKwQOGdbT+Adcly3jsIswlQAAAABJRU5ErkJggg==') no-repeat
+    color: #eee
+    display: inline-block
+    height: 13px
+    line-height: 1
+    margin: 0 0 10px 0
+    position: relative
+    text-transform: uppercase
+    top: 3px
+    vertical-align: middle
+    width: 39px
+  &:hover, &:active
+    opacity: .8
+#main-content-wrapper
+  h1, h2, h3, h4
+    font-weight: normal
+    line-height: 1
+    margin-bottom: 10px
+  h1
+    font-size: 180%
+    .uesp
+      background-color: transparent
+      border: none
+      &:hover, &:active
+        border: none
+  h2
+    background: rgb(236,236,236)
+    background: -moz-linear-gradient(top, rgba(236,236,236,1) 51%, rgba(221,221,221,1) 100%)
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,rgba(236,236,236,1)), color-stop(100%,rgba(221,221,221,1)))
+    background: -webkit-linear-gradient(top, rgba(236,236,236,1) 51%,rgba(221,221,221,1) 100%)
+    background: -o-linear-gradient(top, rgba(236,236,236,1) 51%,rgba(221,221,221,1) 100%)
+    background: -ms-linear-gradient(top, rgba(236,236,236,1) 51%,rgba(221,221,221,1) 100%)
+    background: linear-gradient(top, rgba(236,236,236,1) 51%,rgba(221,221,221,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#dddddd',GradientType=0 )
+    border-bottom: 1px solid #aaa
+    border-top: 1px solid #ddd
+    font-size: 115%
+    padding: 7px 15px
+    margin: 15px 0 15px -15px
+  h4
+    a
+      font-weight: bold
