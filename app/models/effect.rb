@@ -5,6 +5,8 @@ class Effect < ActiveRecord::Base
 
   default_scope order(:name)
 
+  alias :tooltip_records :ingredients
+
   def self.import
     transaction do
       html = Nokogiri::HTML(HTTParty.get 'http://www.uesp.net/wiki/Skyrim:Alchemy_Effects')

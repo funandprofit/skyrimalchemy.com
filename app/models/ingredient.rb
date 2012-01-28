@@ -7,6 +7,8 @@ class Ingredient < ActiveRecord::Base
 
   default_scope order('name ASC')
 
+  alias :tooltip_records :effects
+
   def self.import
     transaction do
       html = Nokogiri::HTML(HTTParty.get 'http://www.uesp.net/wiki/Skyrim:Ingredients')

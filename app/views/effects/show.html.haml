@@ -1,6 +1,8 @@
-%h1 #{@effect.name} Skyrim Potion Effect
-= link_to 'View on UESP', @effect.uesp_link
-%h2 Ingredients:
-%ul
-  - @effect.ingredients.each do |ingredient|
-    %li= link_to ingredient.name, ingredient_path(ingredient)
+#top
+#main
+  %h1
+    #{@effect.name} #{uesp_link(@effect)}
+  %h2 Ingredients:
+  %ul.ingredient-list.no-columns
+    - @effect.ingredients.each do |ingredient|
+      %li= link_to ingredient.name, ingredient_path(ingredient), title: tooltip(ingredient), class: 'tooltip'

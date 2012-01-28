@@ -1,4 +1,4 @@
-%ul
+%ul.ingredient-list
   - @ingredients.each do |ingredient|
     %li
-      = link_to ingredient.name, ingredient_path(ingredient)
+      = link_to ingredient.name, ingredient_path(ingredient), title: tooltip(ingredient), class: 'tooltip'
