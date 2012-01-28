@@ -16,7 +16,7 @@
         #main-content-wrapper
           = yield
       %aside
-        %p Hi, etc.
+        = render :partial => 'layouts/intro'
         .banner= in_bed_with.adsense(ad_slot: 9127468184, ad_type: :square)
       .clear
       .banner= in_bed_with.adsense(ad_slot: 2785886142, ad_type: :leaderboard)
