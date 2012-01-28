@@ -16,7 +16,7 @@ gem 'inherited_resources'
 gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
-gem 'gauges-rails'
+gem 'in_bed_with'
 # gem 'will_paginate'
 
 group :assets do
