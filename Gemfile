@@ -16,6 +16,7 @@ gem 'inherited_resources'
 gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'in_bed_with'
 # gem 'will_paginate'
 
 group :assets do
@@ -30,7 +31,7 @@ end
 
 # Performance
 # gem 'rpm_contrib'
-# gem 'newrelic_rpm'
+gem 'newrelic_rpm'
 
 # Remote/parsing
 # gem 'cabinet'

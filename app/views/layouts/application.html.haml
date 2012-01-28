@@ -13,3 +13,7 @@
         #main-content-wrapper
           = yield
     = render :partial => 'layouts/footer'
+    = in_bed_with.adsense(ad_slot: 6782195439, ad_type: :leaderboard)
+    = yield
+    = in_bed_with.gauges
+    = in_bed_with.adsense(ad_slot: 2785886142, ad_type: :leaderboard)
