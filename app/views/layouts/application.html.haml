@@ -8,6 +8,7 @@
     = in_bed_with.analytics
   %body
     %header
+      = link_to '', root_path
     %section
       .banner= in_bed_with.adsense(ad_slot: 6782195439, ad_type: :leaderboard)
       #main-content
@@ -17,6 +18,7 @@
       %aside
         = render :partial => 'layouts/intro'
         .banner= in_bed_with.adsense(ad_slot: 9127468184, ad_type: :square)
+      .clear
       .banner= in_bed_with.adsense(ad_slot: 2785886142, ad_type: :leaderboard)
     = render :partial => 'layouts/footer'
     = in_bed_with.gauges
