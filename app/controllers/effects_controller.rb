@@ -4,6 +4,10 @@ class EffectsController < InheritedResources::Base
   actions :index, :show
 
   private
+    def resource
+      @effect ||= end_of_association_chain.includes(ingredients: :effects).send(method_for_find, params[:id])
+    end
+
     def collection
       @effects ||= end_of_association_chain.includes(:ingredients)
     end

@@ -35,7 +35,7 @@ module ApplicationHelper
 
   def effect_list(ingredient)
     (ingredient.effects & @ingredient.effects).inject([]) do |a, e|
-      a << link_to(e.name, ingredient_path(e), class: 'effect tooltip')
+      a << link_to(e.name, effect_path(e), class: 'effect tooltip')
     end.join(', ').html_safe
   end
 
