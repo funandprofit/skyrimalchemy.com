@@ -4,6 +4,10 @@ class IngredientsController < InheritedResources::Base
   actions :index, :show
 
   private
+    def resource
+      @ingredient ||= end_of_association_chain.includes(effects: {ingredients: :effects}).first
+    end
+
     def collection
       @ingredients ||= end_of_association_chain.includes(:effects)
     end
