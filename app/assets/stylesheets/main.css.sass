@@ -4,11 +4,28 @@ $text-color:       #363b40
 $link-color:       #363b40
 
 @font-face
-  font-family: 'Am Sans'
-  src:         url('amsansr-webfont.eot')
-  src:         url('amsansr-webfont.eot?#iefix') format('embedded-opentype'), url('amsansr-webfont.woff') format('woff'), url('amsansr-webfont.ttf') format('truetype'), url('amsansr-webfont.svg#AmSansRegular') format('svg')
-  font-weight: normal
-  font-style:  normal
+  font-family: 'Function Pro'
+  src:        url('FunctionPro-Book-webfont.eot')
+  src:        url('FunctionPro-Book-webfont.eot?#iefix') format('embedded-opentype'), url('FunctionPro-Book-webfont.woff') format('woff'), url('FunctionPro-Book-webfont.ttf') format('truetype'), url('FunctionPro-Book-webfont.svg#webfont') format('svg')
+
+@font-face
+  font-family: 'Function Pro'
+  src:         url('FunctionPro-Demi-webfont.eot')
+  src:         url('FunctionPro-Demi-webfont.eot?#iefix') format('embedded-opentype'), url('FunctionPro-Demi-webfont.woff') format('woff'), url('FunctionPro-Demi-webfont.ttf') format('truetype'), url('FunctionPro-Demi-webfont.svg#webfont') format('svg')
+  font-weight: bold
+
+@font-face
+  font-family: 'Function Pro'
+  src:         url('FunctionPro-BookOblique-webfont.eot')
+  src:         url('FunctionPro-BookOblique-webfont.eot?#iefix') format('embedded-opentype'), url('FunctionPro-BookOblique-webfont.woff') format('woff'), url('FunctionPro-BookOblique-webfont.ttf') format('truetype'), url('FunctionPro-BookOblique-webfont.svg#webfont') format('svg')
+  font-style: italic
+
+@font-face
+  font-family: 'Function Pro'
+  src:         url('FunctionPro-DemiOblique-webfont.eot')
+  src:         url('FunctionPro-DemiOblique-webfont.eot?#iefix') format('embedded-opentype'), url('FunctionPro-DemiOblique-webfont.woff') format('woff'), url('FunctionPro-DemiOblique-webfont.ttf') format('truetype'), url('FunctionPro-DemiOblique-webfont.svg#webfont') format('svg')
+  font-weight: bold
+  font-style: italic
 
 =horizontal-center
   margin-left:  auto
@@ -26,7 +43,7 @@ $link-color:       #363b40
 body
   background: black url('sa-bg.jpg') top center fixed no-repeat
   color: $text-color
-  font: 18px/1.5 "Am Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif
+  font: 18px/1.5 "Function Pro", "Segoe UI", "Helvetica Neue", Arial, sans-serif
   padding-top: 40px
 
 body > header
@@ -120,6 +137,7 @@ body > footer
       background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAEl0lEQVR42rWYe0xbVRzHR1+0tLxKXbVK417OGUVmFBKiUadCfCSabYrTMdmYghtrKdBCV3mUsanTEWQP3KYuMKPzNTf2UIhj2WD4zw3ify7OJbLEuRD3j8skJAS/TX4/c3JSbqW5949P4Pb8zjmfe+45v3PunTczMzNvZema/wViU4CBMBFmwiSUpcSYQ7v/IQmpirCEBaQBB8gQSKffU4GZxTQXYhlBJBPcAjzAK3A7cAMnyVqBicW0EJJlHMA1NTXlrQ01Bl4ue+00YhTmxVfWDlbX1Ea/Pd5XiLjbQDbdgEWQSlpIlskA7p27Ol6oqHzzQExAjYZIUwTxdwIXcIhSyQjJMunA3dLWXiZ02ggWSfWcYCPHYBR3f/XN0cdQdz5IF6WSETLQxLSD+e91dK4UZKoTTNJ80M7xXfu6V6tLqQvx6Jjo+edcGPnxfkHGR3GJMIMg1+s+cHAVSdl5Bc5FyEBLNwvkbvYH3qGGQxQzF2pZamj4QlHsBulGTSAlkRCPjpkm4q1N0W1vCKPjori5EgJKuKm5G20uBJn86NSExIlsBc6/b9xYLMg8m4QIk8XtdO7ZW0f5y86jlEjITJPPU9cQDlNDkSQkZJ5mqZs3/8mL5SgeJTUhHp2c0bGxPGF0lsbKNaADKId6DwdplNKAEaTIQuLKcgBPMBwJiatKI4qA4q8LnkAf91KyNasJWUDWLxcv3iWMjkdDIQu3OzwyUkpZPBUYZCFxqTuxGsqpYpuGMkwDUPZ+uH9nLKUAW0Khsg0VH5FQkdZCPLkjLa1fo6+7QdqsQvzINvlraoT9KhdwvjAAG3CDe0AhMMbp9HngB6WgAHhBKpUtp3k0gL7yZxUSE+K5oeGFWwJ1HSTFfMr/y0hSq1TiesBBoES3v92Hvh4AVjUhIwVk/nb58pJo+4622RoPBEPDwrW4L30OlM+++PLk+50fHKtv3DoQrz5uuhX9LAGWeELyDm+jJen5fXy88Mzg2fJz54d8yuio/9dLlzZPTExUosN3qfEd4uOia+VY34n9qP8cePSv69eLfxr7ec3AD2eqT/f31/9x9WpshS0H2ZytZSG1c3MGyKEToBcsAnlbm1u2kVClJLQeKLs6uw4j7kHgofpO2u3ddO0Qz92JNlcWM1IlCwtSYwuqtvj2kdAzktAKoEA4lvwKaBRs3Ea8t5NkztSMhXZq77qK14+QUL5U5z6g+GrrBxFXJGZjES1eg1goe/zKFbVMvoDLpqenH2chuT0thZynvvu+QBCyS7F3cBmOL8U0oroJWYHr40M9xfKSF8jlssnJyRISMukhZAA2OvCXUqddcWKXAQWJ9TxiV4AM3YXeao3ysbY5TuxTQGlt396P2IeBHRj1FHIhSwdIyB8nNkyZupeSnw0YdBHi00BVtY+PthukuBKeP39euxagA71FNyF+pcZrMr00xgeT/ijingRO3hq0FpJfHrPx2EKvlq8/K4psrNo08klP7xGUvwS8fBrU+/sQbyEusBQ8AopBCXgCPARyxQO8HkKylBlYaQWl88cqurbyvOHR0UlI/ZMe/TXKm2YyQv8CLijEUzE4PMIAAAAASUVORK5CYII=')
     &.active
       a:link, a:visited
+        font-weight: bold
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAEgElEQVR42rWYW0hUWxjHy9FJGx3zcqymlLTT5UR5NMpAijJL6SJFE14elOkg5WXIS40WaXZjsB5CTUtTkVI0JDNOIjgPBXEQlCNeHrzgg3d9UfCKT2Lfhv+CxW5vm02zhT+znbXWt3/rW9/6vrVm0/r6uhJtJjlBzpAL5My1bYY2KZUSEAahJW0luZP0nDzw/RYAAszRQIDhQDxJf5AMpABOu0jbSd6AdcUEFIHZDYOX+OLlWaRW0v+cvpIek06QdpK8MAGtEih7YfSY/VXSWwDIanV19cHy8vIeTMBdCZQ9MB6ASeReeo+0lx+DpUpmfRYXF18tLCycoWc/2OCglAM5ITB1MHiNgzH/YpYhpGes//z8/HUlUHLeccb6+5D+5mBu2xMHmIyFjZubmzMCSsd2oBIgJ2zdbSR/UiEM56BdibIZ1MjISDgmuBUTlvSSlHdcEIg7SDc57/gqBYJyhPEzMzNvBgYGgpA2tHJekgpkVwTonxzMJYUQvLYxO8PDw3cmJiYMWDpJL0l5xwNJ7z4MPUD77+gCg2ptbQ1GjoKX5IDgHaxzMOedA2j/Xb0U7HV2dlrIUwbEkkbsJfHOcod3cvhd5SCFI5a+NDQ0HEayddkISIv13s95x+BAIC2z29zcHEepwBe72elnIGx1BLMJA5+gzZHKFWy3t7e/aGtrE1KKmz1AVQAKdzgQgntwcPBjYWHhQcSRLBBbskyuXvmjjfVxQ107hKqukXjpFVIGKY4UhtPBFrSFCrZHR0dtqampIXJA4oQYRIXxJaCY6uQquwjKuEG/d6RK4bmjo+PfhISEo9jVskAadPAcGhraR6n+iZzxqamp/9izyGCD8J3NZmvp6+v7PD4+bpMan5+f/8hoNO6TykVSFd6NpO/q6jLU1dWdqK+vN1VWVt4uLi7OKCoqSq+oqLjV39//HMatouWyAqiitrb2ck1NzemSkpIoGpNAz+by8vK7iYmJcZGRkaHZ2dleUtl6w3MzLZ2eAtCnpaVlJymAIPdOT08Hr62tPQXQLRHQDeH73t7eWtpFx4S0sbKy4jM2NuZN//uVlZVtt1qtPtXV1e40Kf7cLV9cOTANPKaF2HEkkPQaQBdF48+iZn0pLS0NQ4lwYzakbifKz9QQDHpi13wAUIio/xHE2NeCgoJwPhvzcsg1CEBev8jkgawtLy8vggGpdS/TInGGcUA6Ub/dHFDU0tKSp5pArjikRUlteciftVkslmgAOasBxLK0HykOLy2R6PeX0DY5Ofk9PT39LN069KoDccfahxL9zgtt3d3dbWlpaSexpBrVgLBkWQDKEPdjp0xKpu9TUlJCWTVXBwinAe5o+4+oTzSLn6SkpKzc3NwgbAS1gHClxqVRTo2NjZ9iYmLOVVVVebPSoAYQf3n0omDNofv7Nx5kdna2/QP9RURExNJyBVBg4zSo5u9DKCE9PT2+VGgPZGZmnkpOTo4ymUzR8fHxkbGxscfNZrN/U1MTd4BXB4iHckFO0uHKpMenDt8jbuAdhXLIT3r41EgUTcX6AZExbEDKERk8AAAAAElFTkSuQmCC')
   &.effects
     a:link, a:visited
@@ -128,6 +146,7 @@ body > footer
       border-right: 1px solid black
       a:link, a:visited
         background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAEx0lEQVR42sVYSWhUQRB1/jJj/LPqTJzEJEY0EUFFL4KKBpcYNMYYEJeTRs8uN2/qwQ0E8SAueBNcUDwongQvHlxAPIoLBkFcQISQbbJMEl/BayiaieaPMAYe8/Onu+p11auqTmZMTk6WiwjhaJj3fX19M/6AKe2WTUiRcQEP8PnpGmKVJBRRRKJjY2NBf39/F55jJOb+D0IeCcwaGBjYAid38BwAM0nKqSQhB4gKGSCF6FyCky94zgBxkmKUKkPIpdMkkIWDt8Dk0NBQC35Pk6hfGUJMF53OHhkZWQIHRSGESJ3DuxyQYASdShGK0mk19HNEyJDQc7yrAdImbZUg5FDMKXEOEo+EDFEoFotNeD+HEfSASHhC4cu9CshMTEw0wnivkDEYHBw8yLTFlY7+mVBkCjh0EgDZQqHQpskwbbfwXZ6Cj5lqmxI2IcuZS3glwVKnRvLQzwUSKYLIGz5/xnd1TFtcNUvPhvGnR44eAab9x5iSWUSgkGCvmQvUg8RrkngLcidNlIaHh9dQ3HMYqUCDdqso/KgiF9G6iHJRnILN0GBWIcd01GNcLDflDjLXQaJVnvn7CaxpAGqBam2DNmczygmSi5GUY6rGg5HFwDqIcgOwGU2uDdgKtAPb1WcHtNOpI4J3+2CjGc9fqaMXsgbvd+i9/NwmduGjVXzBznpgjZmBhpCPRbUwdo9OwmAQ1dYMGwtF0GXs/wBCGyVDmpDHfCbw5X4s+j5dgyDxlCKehxMfCEFECuHq6OhoXo0ax9ZQAGSwqBmLH1gGPiKKh5CKLqJTwg/trDDagK4amOYOWWNQwtYnSR/1lGAwPE1IRylO0dXgxBKtH8rQL7w7LHoBGmUN1yZpOA1UU9BNINsGMq/sqKCbL2KBJFlIvq4ym1SMpDJAHqdeCiN3rTQ9wVBdyfJPm1I20x+amo/Un5VRovb1ICo7WXnZUmQEdne2W0CSJ6lDZLrlzqMc9IFso7oDBWwXORDWxVEEuSuIymI5INcHutR1xy45Nmyhk1Q9jC4zpQ28EyEDOTpJUxM1jI6ZbYeZ3ry+K+mohJllnhmk4ghiX6nuPtfoqA6RWoh0bGA65iOd61STvCiHse9JtB962rvmqsHZddRuhnT+DiggGsdEzPJezbb3JJRlqnxFJjwhpi3Nu89DOvkJ4S5BSe+SZ0vwN+Q7kD9t3smtwFxJyiZkX1WlcuTuQ6e3RRtWFfUqUs9Q8ttUei9bVxKnXEI+T5VDinYphy8UkVFE4zj0tdqkifisCqCH3TxDTbrhNcSrKk+Vh7ObNK7RSy01APXj4+OLdMlrSAe3dRT2xqj1U2tOqyOAtLSwW+forBqoQ8ROMV1aW1fZSP+YtunoJ4PTbbKMv0KKlqtOneDJk6YXYc9e6779lTpK6T8kwxDyDSEQOKPI3EdqFlizKKpum4EZO4jgWrYE0yTbhRD3eGEIOYpQGsZeksxZcVRqShMu91WZMYKmKbp6zP3XeYiZ4QlxdKCHLICxAfx0c7KnSs0irNFjxzdjx4wUkDmPNd8wflJqbySshqIwtAdkWtQAZYpK/zPBvjkwynEBbO0GVnF/SA3RKDfHBHz2LDI27JuDb9nwTWTDErL/Q+YKdIr+BsuGAsmUIPQbeNbxYvHpCp0AAAAASUVORK5CYII=')
+        font-weight: bold
   &.active
     background-color: rgb(68,72,76)
     background: rgb(68,72,76)
