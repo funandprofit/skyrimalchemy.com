@@ -2,6 +2,7 @@ $site-width:       960px
 $background-color: #edeff2
 $text-color:       #363b40
 $link-color:       #363b40
+$link-color2:      #1f84cc
 
 @font-face
   font-family: 'Function Pro'
@@ -73,15 +74,15 @@ body > footer
       border-bottom: 1px dotted #999
       color: white
     &:hover, &:active
-      border-bottom: 1px solid #a7dbff
-      color: #a7dbff
+      border-bottom: 1px solid $link-color2
+      color: $link-color2
 
 #main-content-wrapper a
   &:link, &:visited
     border-bottom: 1px dotted #ccc
     color: $link-color
     &.effect
-      color: #1f84cc
+      color: $link-color2
       font-weight: bold
   &:hover, &:active
     border-bottom: 1px solid black
@@ -245,3 +246,11 @@ aside
   width: 260px
   .banner
     margin-left: 0
+  a
+    &:link, &:visited
+      border-bottom: 1px dotted #ccc
+      color: $link-color2
+      font-weight: bold
+    &:hover, &:active
+      border-bottom: 1px solid black
+      color: black
