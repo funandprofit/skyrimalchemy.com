@@ -40,10 +40,10 @@ module ApplicationHelper
   end
 
   def facebook_like
-    '<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fskyrimalchemy.com&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:25px;" allowTransparency="true"></iframe>'.html_safe
+    '<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fskyrimalchemy.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:20px;" allowTransparency="true"></iframe>'.html_safe
   end
 
   def tweet_this
-    '<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://skyrimalchemy.com" data-size="large">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'.html_safe
+    '<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://skyrimalchemy.com">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'.html_safe
   end
 end
