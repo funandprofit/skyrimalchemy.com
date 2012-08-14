@@ -2,6 +2,8 @@
 #main
   %h1
     #{@ingredient.name} #{uesp_link(@ingredient)}
+  %h2 Where to find #{@ingredient.name}:
+  %p= @ingredient.location
   %h2 Ideal ingredient matchers:
   - if @ingredient.matching_ingredients.any?
     %p
