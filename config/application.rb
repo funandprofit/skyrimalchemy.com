@@ -58,5 +58,7 @@ module SkyrimAlchemy
 
     # Add app/assets/fonts to the asset path
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
+    config.logger = Logger.new(STDOUT)
   end
 end
