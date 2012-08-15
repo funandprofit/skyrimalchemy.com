@@ -6,5 +6,4 @@
   %p
     %i All ingredients for #{@effect.name}:
   %ul.ingredient-list.no-columns
-    - @effect.ingredients.each do |ingredient|
-      %li= link_to ingredient.name, ingredient_path(ingredient), title: tooltip(ingredient), class: 'tooltip'
+    = render @effect.ingredients

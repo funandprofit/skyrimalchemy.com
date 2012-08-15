@@ -9,10 +9,7 @@
     %p
       %i These are ingredients which have two or more effects in common with #{@ingredient.name}:
     %ul.ingredient-list.no-columns
-      - @ingredient.matching_ingredients.each do |ingredient|
-        %li
-          = link_to ingredient.name, ingredient_path(ingredient), title: tooltip(ingredient), class: 'tooltip'
-          (#{effect_list(ingredient)})
+      = render partial: 'ingredient_with_effects', collection: @ingredient.matching_ingredients
   - else
     %p
       %i None
@@ -24,5 +21,4 @@
       = link_to effect.name, effect_path(effect), class: 'effect'
       = ':'
     %ul.ingredient-list
-      - (effect.ingredients - [@ingredient]).each do |ingredient|
-        %li= link_to ingredient.name, ingredient_path(ingredient), title: tooltip(ingredient), class: 'tooltip'
+      = render (effect.ingredients - [@ingredient])
