@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Rails
 gem 'rails', '3.2.1'
+gem 'unicorn'
 
 # Models
 gem 'pg'
