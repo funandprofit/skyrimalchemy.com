@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120513031438) do
+ActiveRecord::Schema.define(:version => 20120815043557) do
+
+  create_table "dlcs", :force => true do |t|
+    t.string   "name",       :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "effects", :force => true do |t|
     t.string   "name"
@@ -40,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20120513031438) do
     t.datetime "updated_at",                  :null => false
     t.string   "slug"
     t.text     "location"
+    t.integer  "dlc_id"
   end
 
 end

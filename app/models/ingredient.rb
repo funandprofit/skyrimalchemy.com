@@ -1,4 +1,6 @@
 class Ingredient < ActiveRecord::Base
+  belongs_to :dlc
+
   has_many :ingredient_matchers, :through => :effects, :source => :ingredients
 
   has_and_belongs_to_many :effects
