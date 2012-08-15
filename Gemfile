@@ -32,6 +32,7 @@ end
 # Performance
 # gem 'rpm_contrib'
 gem 'newrelic_rpm'
+gem 'oink'
 
 # Remote/parsing
 # gem 'cabinet'

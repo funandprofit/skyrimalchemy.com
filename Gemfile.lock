@@ -55,6 +55,7 @@ GEM
       railties (~> 3.0)
     has_scope (0.5.1)
     hike (1.2.1)
+    hodel_3000_compliant_logger (0.1.0)
     httparty (0.8.1)
       multi_json
       multi_xml
@@ -79,6 +80,9 @@ GEM
     multi_xml (0.4.1)
     newrelic_rpm (3.3.1)
     nokogiri (1.5.0)
+    oink (0.9.3)
+      activerecord
+      hodel_3000_compliant_logger
     pg (0.12.2)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -166,6 +170,7 @@ DEPENDENCIES
   machinist
   newrelic_rpm
   nokogiri
+  oink
   pg
   rails (= 3.2.1)
   rspec-rails (~> 2.8.0)
