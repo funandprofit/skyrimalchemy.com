@@ -1,5 +1,4 @@
 %li
-  = link_to ingredient_with_effects.name, ingredient_path(ingredient_with_effects), title: tooltip(ingredient_with_effects), class: 'tooltip'
-  - if ingredient_with_effects.dlc.present?
-    %span= ingredient_with_effects.dlc.name
+  %a.tooltip{ href: ingredient_path(ingredient_with_effects), title: tooltip(ingredient_with_effects), class: ingredient_with_effects.dlc.present? ? "dlc icon-#{ingredient_with_effects.dlc.name.downcase}" : nil }
+    = ingredient_with_effects.name
   (#{effect_list(ingredient_with_effects)})
