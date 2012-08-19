@@ -5,10 +5,10 @@ class EffectsController < InheritedResources::Base
 
   private
     def resource
-      @effect ||= end_of_association_chain.includes(ingredients: :effects).send(method_for_find, params[:id])
+      @effect ||= end_of_association_chain.includes(ingredients: [:dlc, :effects]).send(method_for_find, params[:id])
     end
 
     def collection
-      @effects ||= end_of_association_chain.includes(:ingredients)
+      @effects ||= end_of_association_chain.includes(ingredients: :dlc)
     end
 end
