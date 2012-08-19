@@ -1,2 +1,4 @@
 %li
   = link_to ingredient.name, ingredient_path(ingredient), title: tooltip(ingredient), class: 'tooltip'
+  - if ingredient.dlc.present?
+    %span= ingredient.dlc.name
