@@ -17,6 +17,7 @@ capybara-*.html
 /spec/tmp/*
 **.orig
 rerun.txt
+.powrc
 
 # TextMate
 *.tmproj
