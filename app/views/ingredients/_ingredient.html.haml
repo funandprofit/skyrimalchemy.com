@@ -1,4 +1,5 @@
 %li
-  = link_to ingredient.name, ingredient_path(ingredient), title: tooltip(ingredient), class: 'tooltip'
+  %span
+    = link_to ingredient.name, ingredient_path(ingredient), title: tooltip(ingredient), class: 'tooltip'
   - if ingredient.dlc.present?
-    %span= ingredient.dlc.name
+    %span{ class: "dlc icon-#{ingredient.dlc.name.downcase}", title: "#{ingredient.dlc.name} Ingredient" }
