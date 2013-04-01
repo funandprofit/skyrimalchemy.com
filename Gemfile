@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '3.2.8'
+gem 'rails'
 gem 'unicorn'
 
 # Models
