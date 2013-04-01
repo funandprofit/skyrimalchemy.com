@@ -10,9 +10,6 @@ gem 'squeel'
 # gem 'ransack'
 gem 'valium'
 
-# Controllers
-gem 'inherited_resources'
-
 # Views/assets
 gem 'haml'
 gem 'haml-rails'

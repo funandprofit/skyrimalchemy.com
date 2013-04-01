@@ -54,7 +54,6 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
-    has_scope (0.5.1)
     hike (1.2.1)
     hodel_3000_compliant_logger (0.1.1)
     httparty (0.10.2)
@@ -63,9 +62,6 @@ GEM
     i18n (0.6.1)
     in_bed_with (0.1.0)
       activesupport (~> 3.1)
-    inherited_resources (1.4.0)
-      has_scope (~> 0.5.0)
-      responders (~> 0.9)
     journey (1.0.4)
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -115,8 +111,6 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
-    responders (0.9.3)
-      railties (~> 3.1)
     rspec (2.8.0)
       rspec-core (~> 2.8.0)
       rspec-expectations (~> 2.8.0)
@@ -174,7 +168,6 @@ DEPENDENCIES
   haml-rails
   httparty
   in_bed_with
-  inherited_resources
   jquery-rails
   machinist
   newrelic_rpm

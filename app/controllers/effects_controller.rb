@@ -1,14 +1,10 @@
-class EffectsController < InheritedResources::Base
-  defaults :finder => :find_by_slug
+class EffectsController < ApplicationController
+  def index
+    @effects = Effect.includes(ingredients: :dlc)
+  end
 
-  actions :index, :show
-
-  private
-    def resource
-      @effect ||= end_of_association_chain.includes(ingredients: [:dlc, :effects]).send(method_for_find, params[:id])
-    end
-
-    def collection
-      @effects ||= end_of_association_chain.includes(ingredients: :dlc)
-    end
+  def show
+    @effect = Effect.includes(ingredients: [:dlc, :effects]).find_by_slug(params[:id])
+    return render_404 unless @effect
+  end
 end

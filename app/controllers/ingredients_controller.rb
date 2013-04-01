@@ -1,14 +1,10 @@
-class IngredientsController < InheritedResources::Base
-  defaults :finder => :find_by_slug
+class IngredientsController < ApplicationController
+  def index
+    @ingredients = Ingredient.includes(:dlc, :effects)
+  end
 
-  actions :index, :show
-
-  private
-    def resource
-      @ingredient  ||= end_of_association_chain.includes(:dlc, effects: {ingredients: :effects}).send(method_for_find, params[:id])
-    end
-
-    def collection
-      @ingredients ||= end_of_association_chain.includes(:dlc, :effects)
-    end
+  def show
+    @ingredient = Ingredient.includes(:dlc, effects: {ingredients: :effects}).find_by_slug(params[:id])
+    return render_404 unless @ingredient
+  end
 end
