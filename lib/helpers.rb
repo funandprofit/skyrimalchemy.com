@@ -3,7 +3,7 @@ module Helpers
     klass  = []
     klass << 'menu-wrapper'
     klass << item.to_s
-    klass << 'active' if current_page.path.start_with?(item.to_s)
+    klass << 'active' if current_page.path.start_with?(item.to_s) || (current_page.path == 'index.html' && item == :ingredients)
     klass.join(' ')
   end
 

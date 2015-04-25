@@ -5,6 +5,11 @@ activate :minify_css
 activate :minify_javascript
 activate :directory_indexes
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.build_before = true
+end
+
 set :haml, { :ugly => true, :format => :html5 }
 
 data.ingredients.each do |ingredient|
@@ -17,4 +22,3 @@ end
 
 ignore '/effect_template.html'
 ignore '/ingredient_template.html'
-
