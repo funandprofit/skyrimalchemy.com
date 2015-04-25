@@ -5,4 +5,4 @@ title: Skyrim Alchemy Potion Effects
 %ul.ingredient-list
   - data.effects.each do |effect|
     %li
-      = link_to effect.name, "/effects/#{effect.slug}.html", title: tooltip(effect), class: 'tooltip'
+      = link_to effect.name, "/effects/#{effect.slug}", title: effect_tooltip(effect), class: 'tooltip'

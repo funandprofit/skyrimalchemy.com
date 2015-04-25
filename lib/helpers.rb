@@ -15,8 +15,22 @@ module Helpers
     link_to '', obj.uesp_link, class: 'uesp', title: "See #{obj.name} on UESP"
   end
 
-  def tooltip(obj)
-    #[headline(obj), *obj.ingredients.map{ |r| link_to(r.name, r).gsub('"', "'") }.join('<br>')].join
+  def ingredient_tooltip(ingredient)
+    [
+      headline(ingredient),
+      *ingredient.effects.map do |effect|
+        link_to(effect.name, "/effects/#{effect.slug}").gsub('"', "'")
+      end.join('<br>')
+    ].join
+  end
+
+  def effect_tooltip(effect)
+    [
+      headline(effect),
+      *effect.ingredients.map do |ingredient|
+        link_to(ingredient.name, "/ingredients/#{ingredient.slug}").gsub('"', "'")
+      end.join('<br>')
+    ].join
   end
 
   def effect_list(ingredient)

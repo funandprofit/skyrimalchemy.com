@@ -5,6 +5,6 @@ title: Skyrim Alchemy Potion Ingredients
 %ul.ingredient-list
   - data.ingredients.each do |ingredient|
     %li
-      %a.tooltip{ href: ingredient, title: ingredient, class: ingredient.dlc.present? ? "dlc icon-#{ingredient.dlc.downcase}" : nil }
+      %a.tooltip{ href: "/ingredients/#{ingredient.slug}", title: ingredient_tooltip(ingredient), class: ingredient.dlc.present? ? "dlc icon-#{ingredient.dlc.downcase}" : nil }
         = ingredient.name
 
