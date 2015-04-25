@@ -1,0 +1,6 @@
+%ul.ingredient-list
+  - @ingredients.each do |ingredient|
+    %li
+      %a.tooltip{ href: ingredient_path(ingredient), title: tooltip(ingredient), class: ingredient.dlc.present? ? "dlc icon-#{ingredient.dlc.name.downcase}" : nil }
+        = ingredient.name
+

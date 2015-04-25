@@ -1,4 +1,0 @@
-%li
-  %a.tooltip{ href: ingredient_path(ingredient_with_effects), title: tooltip(ingredient_with_effects), class: ingredient_with_effects.dlc.present? ? "dlc icon-#{ingredient_with_effects.dlc.name.downcase}" : nil }
-    = ingredient_with_effects.name
-  (#{effect_list(ingredient_with_effects)})
