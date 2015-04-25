@@ -7,17 +7,41 @@ module Helpers
     klass.join(' ')
   end
 
-  def headline(obj)
-    content_tag(:h3, obj.name + uesp_link(obj).gsub('"', "'"))
+  def effects_for(ingredient)
+    ingredient.effects.map do |effect|
+      data.effects.find { |e| effect.id == e.id }
+    end
   end
 
-  def uesp_link(obj)
-    link_to '', obj.uesp_link, class: 'uesp', title: "See #{obj.name} on UESP"
+  def ingredients_for(effect)
+    effect.ingredients.map do |ingredient|
+      data.ingredients.find { |i| ingredient.id == i.id }
+    end
+  end
+
+  def matching_ingredients_for(ingredient)
+    unique_matchers = ingredient.ingredient_matchers.uniq do |matching_ingredient|
+      matching_ingredient.id
+    end
+
+    matchers_with_effects = unique_matchers.map do |matching_ingredient|
+      data.ingredients.find { |i| matching_ingredient.id == i.id }
+    end
+
+    matchers_with_effects.select do |matching_ingredient|
+      (ingredient.effects & matching_ingredient.effects).count > 1
+    end
+  end
+
+  def matching_effects_list(ingredient, matching_ingredient)
+    (ingredient.effects & matching_ingredient.effects).map do |effect|
+      link_to(effect.name, "/effects/#{effect.slug}", class: 'effect tooltip')
+    end.join(', ').html_safe
   end
 
   def ingredient_tooltip(ingredient)
     [
-      headline(ingredient),
+      content_tag(:h3, ingredient.name + uesp_link(ingredient).gsub('"', "'")),
       *ingredient.effects.map do |effect|
         link_to(effect.name, "/effects/#{effect.slug}").gsub('"', "'")
       end.join('<br>')
@@ -26,17 +50,15 @@ module Helpers
 
   def effect_tooltip(effect)
     [
-      headline(effect),
+      content_tag(:h3, effect.name + uesp_link(effect).gsub('"', "'")),
       *effect.ingredients.map do |ingredient|
         link_to(ingredient.name, "/ingredients/#{ingredient.slug}").gsub('"', "'")
       end.join('<br>')
     ].join
   end
 
-  def effect_list(ingredient)
-    (ingredient.effects & @ingredient.effects).inject([]) do |a, e|
-      a << link_to(e.name, effect_path(e), class: 'effect tooltip')
-    end.join(', ').html_safe
+  def uesp_link(obj)
+    link_to '', obj.uesp_link, class: 'uesp', title: "See #{obj.name} on UESP"
   end
 
   def facebook_like

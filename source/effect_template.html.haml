@@ -1,9 +1,12 @@
 #top
 #main
   %h1
-    #{@effect.name} #{uesp_link(@effect)}
+    #{effect.name} #{uesp_link(effect)}
   %h2 Ingredients:
   %p
-    %i All ingredients for #{@effect.name}:
+    %i All ingredients for #{effect.name}:
   %ul.ingredient-list.no-columns
-    = render @effect.ingredients
+    - ingredients_for(effect).each do |ingredient|
+      %li
+        %a.tooltip{ href: "/ingredients/#{ingredient.slug}", title: ingredient_tooltip(ingredient), class: ingredient.dlc.present? ? "dlc icon-#{ingredient.dlc.downcase}" : nil }
+          = ingredient.name
