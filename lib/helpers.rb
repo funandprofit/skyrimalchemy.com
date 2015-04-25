@@ -1,23 +1,9 @@
-module ApplicationHelper
-  def page_title
-    case
-      when @ingredients.present?
-        'Skyrim Alchemy Potion Ingredients'
-      when @ingredient.present?
-        "#{@ingredient.name} - Skyrim Alchemy Potion Ingredients"
-      when @effects.present?
-        'Skyrim Alchemy Potion Effects'
-      when @effect.present?
-        "#{@effect.name} - Skyrim Alchemy Potion Effects"
-    end
-  end
-
+module Helpers
   def menu_class(item)
     klass  = []
     klass << 'menu-wrapper'
     klass << item.to_s
-    klass << 'active' if params[:controller] == item.to_s
-
+    klass << 'active' if current_page.path.start_with?(item.to_s)
     klass.join(' ')
   end
 
@@ -30,7 +16,7 @@ module ApplicationHelper
   end
 
   def tooltip(obj)
-    [headline(obj), *obj.tooltip_records.map{ |r| link_to(r.name, r).gsub('"', "'") }.join('<br>')].join.html_safe
+    #[headline(obj), *obj.ingredients.map{ |r| link_to(r.name, r).gsub('"', "'") }.join('<br>')].join
   end
 
   def effect_list(ingredient)

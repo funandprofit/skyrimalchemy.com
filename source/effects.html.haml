@@ -1,4 +1,4 @@
 %ul.ingredient-list
-  - @effects.each do |effect|
+  - data.effects.each do |effect|
     %li
-      = link_to effect.name, effect_path(effect), title: tooltip(effect), class: 'tooltip'
+      = link_to effect.name, "/effects/#{effect.slug}.html", title: tooltip(effect), class: 'tooltip'
