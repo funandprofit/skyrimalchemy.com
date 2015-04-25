@@ -32,4 +32,21 @@ module Helpers
   def tweet_this
     '<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://skyrimalchemy.com" data-hashtags="skyrimalchemy">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>'.html_safe
   end
+
+  def analytics_code
+    property_id = 'UA-28186953-2'
+    "<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '#{property_id}', 'auto');
+      ga('send', 'pageview');
+    </script>"
+  end
+
+  def adsense_code(ad_slot, dimensions)
+    publisher_id = 'ca-pub-5930429795374127'
+    "<script async src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script><ins class='adsbygoogle' style='display:inline-block;width:#{dimensions[:width]}px;height:#{dimensions[:height]}px' data-ad-client='#{publisher_id}' data-ad-slot='#{ad_slot}'></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>"
+  end
 end

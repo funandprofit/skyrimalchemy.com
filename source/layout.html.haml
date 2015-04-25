@@ -4,20 +4,19 @@
     %title= current_page.data.title
     = stylesheet_link_tag    'application', :media => 'all'
     = javascript_include_tag 'application'
-    = #in_bed_with.analytics
   %body
     %header
       = link_to '', '/'
     %section
-      .banner= #in_bed_with.adsense(ad_slot: 6782195439, ad_type: :leaderboard)
+      .banner= adsense_code(6782195439, { width: 728, height: 90 })
       #main-content
         %nav
           %ul.clearfix
             %li{class: menu_class(:ingredients)}= link_to 'View Ingredients', '/ingredients.html'
             %li{class: menu_class(:effects)}= link_to 'View Effects', '/effects.html'
         #main-content-wrapper
-          = #facebook_like
-          = #tweet_this
+          = facebook_like
+          = tweet_this
           = yield
       %aside
         %p
@@ -25,7 +24,8 @@
         %p SkyrimAlchemy.com is the best source for finding out which ingredients match with other ingredients in ElderScrolls V: Skyrim.
         %p In addition to ingredient matchers, you can also see where all ingredients can be found.
         %p Questions? Comments? Feedback? Please send us an email: #{mail_to 'mudcrabs@skyrimalchemy.com'}.
-        .banner= #in_bed_with.adsense(ad_slot: 9127468184, ad_type: :square)
+        .banner= adsense_code(9127468184, { width: 250, height: 250 })
       .clear
-      .banner= #in_bed_with.adsense(ad_slot: 2785886142, ad_type: :leaderboard)
+      .banner= adsense_code(2785886142, { width: 728, height: 90 })
     %footer © 2012 SkyrimAlchemy.com
+    = analytics_code
