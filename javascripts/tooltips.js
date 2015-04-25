@@ -1,0 +1,1 @@
+$(function(){$(".tooltip").qtip({position:{adjust:{x:7,y:0,screen:!0},my:"left center",at:"right center",target:".ingredient-list li"},adjust:{},hide:{delay:100,fixed:!0},show:{effect:!1,delay:275},style:{classes:"ui-tooltip-skyrim"}})});
